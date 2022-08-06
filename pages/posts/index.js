@@ -6,7 +6,8 @@ import { getPosts } from "../../lib/data";
 
 export const getStaticProps = async () => {
   const data = await getPosts();
-  // console.log(data);
+  console.log(data);
+
   return {
     props: {
       items: data.posts,
@@ -18,24 +19,18 @@ export default function Posts({ items }) {
   console.log(items);
   return (
     <>
-      <div className="max-w-3xl mx-auto grid lg:grid-cols-2 sm:grid-cols-1">
+      <div className="max-w-3xl mx-auto grid grid-cols-1">
+        <div><h1 className="text-4xl font-semibold mb-7">All Posts</h1></div>
         {items?.map((item) => (
-          <div key={item.slug}>
+          <div key={item.slug}>            
             <Link href={`/posts/${item.slug}`}>
               <a>
                 <div className="m-2">
-                  <Image className="hover:opacity-80 " 
-                    src={item.image[0].url}
-                    height={item.image[0].height}
-                    objectFit="cover"
-                    width={item.image[0].width}
-                  />
-                </div>
-                {/* <div className="flex-auto px-6 ">
-                  <h1 className="text-2xl font-semibold transition-colors duration-300">
+                  <div className="text-xs">{item.date}</div>
+                  <h1 className="text-2xl font-semibold">
                     {item.title}
                   </h1>
-                  <div className="mt-2">
+                  <div className="mt-2">                    
                     {item.tags.map((tag) => (
                       <span
                         className="text-white uppercase tracking-wide text-xs mr-2 px-2 py-1 rounded bg-slate-800"
@@ -43,9 +38,10 @@ export default function Posts({ items }) {
                       >
                         {tag}
                       </span>
-                    ))}
+                    ))} 
+                    
                   </div>
-                </div> */}
+                </div>                
               </a>
             </Link>
           </div>

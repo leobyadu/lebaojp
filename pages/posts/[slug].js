@@ -55,7 +55,7 @@ export default function Home({ postItem, contents }) {
               layout="responsive"
             />
         </div>
-        <div className="my-3">
+        <div className="my-3 prose prose-xl">
           <MDXRemote {...contents} />
         </div>
         <div className="mt-11 text-center">
