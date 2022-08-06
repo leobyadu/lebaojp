@@ -8,7 +8,8 @@ import { getProjectItem, getProjectSlugs } from "../../lib/data"
 
 export const getStaticPaths = async () => {
     const slugsRes = await getProjectSlugs();
-    const slugs = slugsRes.posts;
+    const slugs = slugsRes.projects;
+    console.log(slugs);
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug.slug } })),
@@ -20,8 +21,8 @@ export const getStaticProps = async ({ params }) => {
   const projectItem = await getProjectItem(params.slug);
   return {
     props: {
-        projectItem: projectItem.posts[0],
-        contents: await serialize(projectItem.posts[0].content),
+        projectItem: projectItem.projects[0],
+        contents: await serialize(projectItem.projects[0].content),
     },
   };
 };
@@ -46,9 +47,9 @@ export default function Home({ projectItem, contents }) {
         </div>
         <div className="my-5">
           <Image
-              src={projectItem.coverImage.url}
-              width={projectItem.coverImage.width}
-              height={projectItem.coverImage.height}
+              src={projectItem.image[0].url}
+              width={projectItem.image[0].width}
+              height={projectItem.image[0].height}
               alt={projectItem.title}
               priority
               layout="responsive"
@@ -58,7 +59,7 @@ export default function Home({ projectItem, contents }) {
           <MDXRemote {...contents} />
         </div>
         <div className="mt-11 text-center">
-          <span class="bg-transparent hover:bg-slate-800 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+          <span className="bg-transparent hover:bg-slate-800 text-black hover:text-white font-semibold py-2 px-4 border border-black hover:border-transparent rounded">
             <Link href="/projects">Back to Projects</Link>
           </span>
         </div>
