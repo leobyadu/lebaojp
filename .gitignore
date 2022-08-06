@@ -1,0 +1,15 @@
+node_modules
+public
+# dependencies
+.next
+/.pnp
+.pnp.js
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# production
+/build
