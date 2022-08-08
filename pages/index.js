@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-// import Hero from "../components/Hero";
 
 import { getAll } from "../lib/data";
+import Hero from "../components/Hero";
 
 export const getStaticProps = async () => {
   const data = await getAll();
@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ data }) {
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>
@@ -23,15 +23,16 @@ export default function Home({ data }) {
         <title>My First NextJs Blog</title>
         <meta name="description" content="Nextjs Blog" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {/* <Hero /> */}
+      </Head>    
+      <Hero />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-0">
-        <div className="mt-20 ">
-          <div className="text-4xl font-semibold mb-4">Recent Posts</div>
+        <div>
+          <div className="text-4xl font-semibold my-10">Recent Posts</div>
+          {/* -------- Single item -------- */}
           {data?.posts?.map((item) => (
             <div
               key={item.slug}
-              className="grid grid-cols-1 md:grid-cols-4 py-6"
+              className="grid grid-cols-1 md:grid-cols-4 mb-4"
             >
               <div className="mb-2 md:mb-0 md:col-span-1">
                 <p className="text-sm">{new Date(item.date).toDateString()}</p>
@@ -42,7 +43,7 @@ export default function Home({ data }) {
                     {item.title}
                   </a>
                 </Link>
-                <p className="text-gray-700 leading-relaxed"></p>
+                <p className="text-gray-700 leading-relaxed">{item.description}</p>
                 <div className="text-sm font-semibold mt-1">
                   {item.authors[0].name}
                 </div>
