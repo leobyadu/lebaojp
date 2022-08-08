@@ -9,7 +9,7 @@ import { getPostItem, getPostSlugs } from "../../lib/data"
 export const getStaticPaths = async () => {
     const slugsRes = await getPostSlugs();
     const slugs = slugsRes.posts;
-    console.log(slugs);
+    // console.log(slugs);
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug.slug } })),
@@ -28,7 +28,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function Home({ postItem, contents }) {
-    console.log(postItem);
+    // console.log(postItem);
     // console.log(contents);
 
   return (

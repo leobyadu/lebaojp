@@ -27,12 +27,12 @@ export const getStaticProps = async () => {
 
     return {
       props: {
-        items: data.posts,
+        posts: data.posts,
       },
     };
   };
 
-export default function Posts({ items }) {
+export default function Posts({ posts }) {
   
   const [searchValue, setSearchValue] = useState("");
   const { data, error } = useSWR(
@@ -53,13 +53,13 @@ export default function Posts({ items }) {
       searchValue,
     ],
     (endpoint, query) => fetcher(endpoint, query, { searchValue }),
-    { initialData: { items }, revalidateOnFocus: true }
+    { initialData: { posts }, revalidateOnFocus: true }
   );
 
   if (error) {
     return (
       <div className="max-w-3xl mx-auto">
-        <h2>There was an error with the data fetching</h2>
+        <h2 className="text-1xl text-red text text-center justify-between">There was an error with the data fetching !!!!</h2>
       </div>
     );
   }
@@ -79,7 +79,7 @@ export default function Posts({ items }) {
             onChange={(event) => setSearchValue(event.target.value)}
           />
         </div>
-        {items?.map((item) => (
+        {data?.posts?.map((item) => (
           <div key={item.slug}>
             <Link href={`/posts/${item.slug}`}>
               <a>

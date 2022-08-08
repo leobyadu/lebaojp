@@ -9,7 +9,7 @@ import { getProjectItem, getProjectSlugs } from "../../lib/data"
 export const getStaticPaths = async () => {
     const slugsRes = await getProjectSlugs();
     const slugs = slugsRes.projects;
-    console.log(slugs);
+    // console.log(slugs);
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug.slug } })),
@@ -28,7 +28,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function Home({ projectItem, contents }) {
-    console.log(projectItem);
+    // console.log(projectItem);
     // console.log(contents);
 
   return (
