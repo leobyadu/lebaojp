@@ -34,11 +34,12 @@ export default function About({ data, contentsbio }) {
           <div>
             <div className="grid grid-flow-row-dense lg:grid-cols-3 sm:grid-cols-1 gap-4">
               <Image
-                className="rounded"
+                className="rounded-full"
                 src={item.picture.url}
                 width={item.picture.width/5}
                 height={item.picture.height/5}
                 layout="responsive"
+                alt="leobyadu"
               />
               <div className="lg:col-span-2 sm:col-span-1">
                 <div className="text-xl text-slate-800 mb-5">{item.intro}
