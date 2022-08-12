@@ -72,15 +72,15 @@ export default function Home({ data }) {
                     src={item.image[0].url}
                     width={item.image[0].width}
                     height={item.image[0].height}
-                    alt={item.title}
+                    alt={item.image[0].id}
                     priority
                     layout="responsive"
                   />
                   <h3 className="font-semibold text-md">{item.title}</h3>
-                  <div>
+                  <div className="">
                     {item.tags.map((tag) => (
                       <span
-                        className="text-white uppercase text-xs mr-2 px-2 py-1 rounded bg-slate-800"
+                        className="text-white uppercase text-xs mr-2 mt-2 px-2 py-1 rounded bg-slate-800"
                         key={tag}
                       >
                         {tag}

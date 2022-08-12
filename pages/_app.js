@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import "tailwindcss/tailwind.css";
 
 import Menu from "../components/Menu";
@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <Menu />
     <Component {...pageProps} />
     <Footer />
-    </>;
+    </>
 }
 
 export default MyApp

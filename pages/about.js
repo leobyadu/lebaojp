@@ -31,7 +31,7 @@ export default function About({ data, contentsbio }) {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="text-4xl font-semibold my-10">About Me</div>
         {data?.authors?.map((item) => (
-          <div>
+          <div key={item.id}>
             <div className="grid grid-flow-row-dense lg:grid-cols-3 sm:grid-cols-1 gap-4">
               <Image
                 className="rounded-full"
