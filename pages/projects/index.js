@@ -18,11 +18,11 @@ export default function Projects({ items }) {
   console.log(items);
   return (
     <>
-      <div className="max-w-3xl mx-auto mx-4">
+      <div className="max-w-3xl mx-auto px-4">
         <div>
           <h1 className="text-4xl font-semibold mb-7">All Projects</h1>
         </div>
-        <div className="grid lg:grid-cols-2 sm:grid-cols-1">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 ">
           {items?.map((item) => (
             <div key={item.slug} className="pb-10">
               <Link href={`/projects/${item.slug}`}>

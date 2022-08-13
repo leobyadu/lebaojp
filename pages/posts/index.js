@@ -66,11 +66,9 @@ export default function Posts({ posts }) {
   
   return (
     <>
-      <div className="max-w-3xl mx-auto grid grid-cols-1 mx-4">
-        <div>
-          <h1 className="text-4xl font-semibold mb-7">All Posts</h1>
-        </div>
-        <div>
+      <div className="max-w-3xl mx-auto px-4">  
+      <div>      
+          <h1 className="text-4xl font-semibold mb-7">All Posts</h1>        
           <input
             type="text"
             value={searchValue}
@@ -101,7 +99,8 @@ export default function Posts({ posts }) {
             </Link>
           </div>
         ))}
-      </div>
+        </div>
+      
     </>
   );
 }
