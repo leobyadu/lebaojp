@@ -59,10 +59,10 @@ export default function Home({ data }) {
       </div>
 
       <div className="max-w-3xl mx-auto items-center justify-between">
-        <div className="text-4xl font-semibold mb-10 mt-20">
+        <div className="text-4xl font-semibold mb-10 mt-20 mx-4">
           Recent Projects
         </div>
-        <div className="grid grid-rows-1 grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 m-4">
           {data?.projects?.map((item) => (
             <div key={item.slug}>
               <Link href={`/projects/${item.slug}`}>

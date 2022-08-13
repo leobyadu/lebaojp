@@ -18,7 +18,7 @@ export default function Projects({ items }) {
   console.log(items);
   return (
     <>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto mx-4">
         <div>
           <h1 className="text-4xl font-semibold mb-7">All Projects</h1>
         </div>
@@ -27,7 +27,7 @@ export default function Projects({ items }) {
             <div key={item.slug} className="pb-10">
               <Link href={`/projects/${item.slug}`}>
                 <a>
-                  <div className="m-2">
+                  <div className="mt-4">
                     <Image
                       className="hover:opacity-80 rounded "
                       src={item.image[0].url}
@@ -36,7 +36,7 @@ export default function Projects({ items }) {
                       width={item.image[0].width}
                     />
                   </div>
-                  <div className="flex-auto px-2 ">
+                  <div className="flex-auto">
                   <h1 className="text-2xl font-semibold">
                     {item.title}
                   </h1>

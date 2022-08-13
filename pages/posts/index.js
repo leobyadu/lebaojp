@@ -66,7 +66,7 @@ export default function Posts({ posts }) {
   
   return (
     <>
-      <div className="max-w-3xl mx-auto grid grid-cols-1">
+      <div className="max-w-3xl mx-auto grid grid-cols-1 mx-4">
         <div>
           <h1 className="text-4xl font-semibold mb-7">All Posts</h1>
         </div>
@@ -83,7 +83,7 @@ export default function Posts({ posts }) {
           <div key={item.slug}>
             <Link href={`/posts/${item.slug}`}>
               <a>
-                <div className="m-2">
+                <div className="mt-4">
                   <div className="text-xs">{item.date}</div>
                   <h1 className="text-2xl font-semibold">{item.title}</h1>
                   <div className="mt-2">
