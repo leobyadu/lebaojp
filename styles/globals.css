@@ -29,3 +29,7 @@ a {
     background: rgb(240, 240, 240);
   }
 }
+
+.text-xxs {
+  font-size: 8px;
+}

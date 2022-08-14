@@ -80,7 +80,7 @@ export default function Home({ data }) {
                   <div className="">
                     {item.tags.map((tag) => (
                       <span
-                        className="text-white uppercase text-xs mr-2 mt-2 px-2 py-1 rounded bg-slate-800"
+                        className="text-white uppercase text-xs mr-2 mt-2 px-2 py-1 rounded-full bg-slate-800"
                         key={tag}
                       >
                         {tag}

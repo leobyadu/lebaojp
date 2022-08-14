@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Projects({ items }) {
-  console.log(items);
+  // console.log(items);
   return (
     <>
       <div className="max-w-3xl mx-auto px-4">
@@ -29,7 +29,7 @@ export default function Projects({ items }) {
                 <a>
                   <div className="mt-4">
                     <Image
-                      className="hover:opacity-80 rounded "
+                      className="hover:opacity-80 rounded"
                       src={item.image[0].url}
                       height={item.image[0].height}
                       objectFit="cover"
@@ -43,7 +43,7 @@ export default function Projects({ items }) {
                   <div className="mt-2">
                     {item.tags.map((tag) => (
                       <span
-                        className="text-white uppercase tracking-wide text-xs mr-2 px-2 py-1 rounded bg-slate-800"
+                        className="text-white uppercase tracking-wide text-xs mr-2 px-2 py-1 rounded-full bg-slate-800"
                         key={tag}
                       >
                         {tag}
