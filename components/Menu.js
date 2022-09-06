@@ -12,11 +12,11 @@ export default function Header() {
               <a className="text-gray-900 hover:text-red-500 hover:underline">Home</a>
             </Link>
           </li>
-          <li className="ml-4">
-            <Link href="/about">
-              <a className="text-gray-900 hover:text-red-500 hover:underline">About</a>
-            </Link>
-          </li>
+//           <li className="ml-4">
+//             <Link href="/about">
+//               <a className="text-gray-900 hover:text-red-500 hover:underline">About</a>
+//             </Link>
+//           </li>
           <li className="ml-4">
             <Link href="/projects">
               <a className="text-gray-900 hover:text-red-500 hover:underline">Projects</a>
