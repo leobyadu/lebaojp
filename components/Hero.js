@@ -8,9 +8,9 @@ export default function Hero() {
         <span className="text-green-700">Website</span>
       </h1>
       <p className="text-xs">This blog I made by Next.js + Tailwind css + GraphCMS</p>
-      <Link href="https://github.com/leobyadu/my-nextjs-blog" >
+      {/* <Link href="https://github.com/leobyadu/my-nextjs-blog" >
         <a className="m-2 hover:text-red-500 border-solid border-1">GitHub</a>
-      </Link>
+      </Link> */}
       <p className="text-gray-700 font-semibold text-xl mt-8 lg:text-center">
         Change your life today. Don&apos;t gamble on the future, act now,
         without delay.
