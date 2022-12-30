@@ -65,7 +65,7 @@ const social = [
   
   export default function Footer() {
     return (
-      <div className="max-w-3xl mx-auto py-10 px-4 sm:px-6 lg:px-0 flex flex-col justify-center">
+      <div className="mx-auto py-10 px-4 sm:px-6 lg:px-0 flex flex-col justify-center">
         <div className="mt-8 flex justify-center space-x-6">
           {social.map((item) => (
             <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">

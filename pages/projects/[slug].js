@@ -34,7 +34,7 @@ export default function Home({ projectItem, contents }) {
   return (
     <div className="px-3 py-3" key={projectItem.id}>
       <Head>
-        <title>Nextjs Blog</title>
+        <title>Nextjs Projects</title>
         <meta name="description" content="Nextjs Blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
