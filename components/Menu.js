@@ -2,35 +2,28 @@ import Link from "next/link";
 
 export default function Menu() {
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-0">
-      <div className="flex sm:flex-row justify-center w-full text-xl">        
-            <ul className="flex sm:mt-0">
+    <div className="max-w-5xl mx-auto">
+      <div className="flex sm:flex-row justify-between w-full md:pt-10 ss:pt-3 ss:flex-col">
+        <div className="text-center">
+          <h1 className="text-xl static text-red-500">Bao</h1>
+          <span className=" text-slate-200">Blog&Portfolio</span>
+        </div>        
+            <ul className="flex sm:mt-0 text-xl ss:text-center ss:pt-10 mx-auto">
               <li>
                 <Link href="/">
-                  <a className="text-gray-900 hover:text-slate-900 hover:font-bold">Home</a>
+                  <a className="text-gray-500 hover:text-slate-100 hover:font-bold active:text-slate-100">Portfolio</a>
                 </Link>
               </li>              
               <li className="ml-7">
                 <Link href="/posts">
-                  <a className="text-gray-900 hover:text-slate-900 hover:font-bold">Blog</a>
+                  <a className="text-gray-500 hover:text-slate-100 hover:font-bold active:text-slate-100">Blog</a>
                 </Link>
-              </li>
+              </li>              
               <li className="ml-7">
-                <Link href="/projects">
-                  <a className="text-gray-900 hover:text-slate-900 hover:font-bold">Projects</a>
+                <Link href="#">
+                  <a className="text-gray-500 hover:text-slate-100 hover:font-bold active:text-slate-100">Inspirations</a>
                 </Link>
               </li>
-              <li className="ml-7">
-                <Link href="/inspirations">
-                  <a className="text-gray-900 hover:text-slate-900 hover:font-bold">Inspirations</a>
-                </Link>
-              </li>
-              <li className="ml-7">
-                <Link href="/tips">
-                  <a className="text-gray-900 hover:text-slate-900 hover:font-bold">Tips</a>
-                </Link>
-              </li>
-              
             </ul>
       </div>
     </div>
