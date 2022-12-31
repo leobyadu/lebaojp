@@ -4,6 +4,8 @@ import Link from "next/link";
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 
+import Menu from "../../components/Menu";
+
 import { getProjectItem, getProjectSlugs } from "../../lib/data"
 
 export const getStaticPaths = async () => {
@@ -32,14 +34,17 @@ export default function Home({ projectItem, contents }) {
     // console.log(contents);
 
   return (
-    <div className="px-3 py-3" key={projectItem.id}>
+    <div className="mx-auto max-w-full ss:px-3 md:px-0" key={projectItem.id}>
       <Head>
-        <title>Nextjs Projects</title>
+        <title>Bao Projects| {projectItem.title}</title>
         <meta name="description" content="Nextjs Blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="max-w-3xl mx-auto items-center justify-between">         
-        <h1 className="text-3xl py-3">{projectItem.title}</h1>
+      <div className="bg_gradient pb-5">
+        <Menu />
+      </div>
+      <div className="max-w-4xl mx-auto items-center justify-between pt-10">         
+        <h1 className="text-3xl py-3 font-bold">{projectItem.title}</h1>
         <div>
         {projectItem.tags.map(tag => (
           <span key={tag} className="text-white uppercase text-xs mr-2 px-2 py-1 rounded bg-slate-800">{tag}</span>
@@ -58,9 +63,9 @@ export default function Home({ projectItem, contents }) {
         <div className="my-3 prose prose-xl">
           <MDXRemote {...contents} />
         </div>
-        <div className="mt-11 text-center">
+        <div className="py-20 text-center">
           <span className="bg-transparent hover:bg-slate-800 text-black hover:text-white font-semibold py-2 px-4 border border-black hover:border-transparent rounded">
-            <Link href="/projects">Back to Projects</Link>
+            <Link href="/">Back to Projects</Link>
           </span>
         </div>
       </div>      
