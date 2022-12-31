@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.01rem;
   font-size: 0.8rem;
-   
 }
 
 a {
@@ -38,29 +37,46 @@ a {
 }
 
 .bg_gradient {
-
-  background:-moz-radial-gradient(circle at 73% 69%, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%);
+  background: -moz-radial-gradient(
+    circle at 73% 69%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(56, 56, 56, 1) 100%
+  );
 
   /* safari 5.1+,chrome 10+ */
-  background:-webkit-radial-gradient(circle at 73% 69%, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%);
+  background: -webkit-radial-gradient(
+    circle at 73% 69%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(56, 56, 56, 1) 100%
+  );
 
   /* opera 11.10+ */
-  background:-o-radial-gradient(circle at 73% 69%, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%);
+  background: -o-radial-gradient(
+    circle at 73% 69%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(56, 56, 56, 1) 100%
+  );
 
   /* ie 10+ */
-  background:-ms-radial-gradient(circle at 73% 69%, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%);
+  background: -ms-radial-gradient(
+    circle at 73% 69%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(56, 56, 56, 1) 100%
+  );
 
   /* global 92%+ browsers support */
-  background:radial-gradient(circle at 73% 69%, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%);
-
+  background: radial-gradient(
+    circle at 73% 69%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(56, 56, 56, 1) 100%
+  );
 }
 
 .footer_tittle {
-  @apply py-5 text-2xl font-bold text-yellow-500 relative after:absolute after:w-1 after:h-8 after:bg-yellow-400 after:top-4 after:left-12;
+  @apply py-5 text-2xl font-bold text-yellow-500;
 
-  background: #080E5C;
-  background: linear-gradient(to right, #080E5C 0%, #CFBB02 100%);
+  background: #080e5c;
+  background: linear-gradient(to right, #080e5c 0%, #cfbb02 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }

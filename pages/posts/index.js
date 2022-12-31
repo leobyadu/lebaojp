@@ -28,7 +28,7 @@ export default function Posts ({ data }) {
 
 function ListPosts({ data }) {
     return (
-      <section className="px-20 pt-20 max-w-7xl mx-auto">        
+      <section className="px-20 pt-20 max-w-7xl mx-auto ss:px-3 ss:pt-5">        
         <div className="grid md:grid-cols-3 sm:grid-cols-2 md:gap-7 sm:gap-5">
           {/* -------- Single item -------- */}
           {data?.posts?.map((item) => (
