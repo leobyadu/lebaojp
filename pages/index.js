@@ -4,6 +4,7 @@ import Image from "next/image";
 
 //import data from graphQL Api
 import { getAll } from "../lib/data";
+import Trending from "../components/Trending";
 
 export const getStaticProps = async () => {
   const data = await getAll();
@@ -15,10 +16,13 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ data }) {
-//   console.log(data);
+  // console.log(data);
   return (
     <Wrapper>
       {/* {Posts({ data })} */}
+      <div>
+        <Trending></Trending>
+      </div>
       {Projects({ data })}
     </Wrapper>
   );
@@ -54,24 +58,26 @@ function Posts({ data }) {
 function Projects({ data }) {
   return (
     <section className="lg:px-20 lg:pt-20 ss:px-3 ss:pt-5">
-      <h1 className="font-bold text-4xl pb-10 pt-5 text-white relative after:absolute after:w-9 after:h-1  after:bg-yellow-500 after:top-0 after:left-0">Recent Projects</h1>
+      <h1 className="font-bold text-4xl pb-10 pt-5 text-white relative after:absolute after:w-9 after:h-1  after:bg-yellow-500 after:top-0 after:left-0">
+        Recent Projects
+      </h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 ">
         {/* -------- Single item -------- */}
         {data?.projects?.map((item) => (
           <div key={item.slug}>
             <div>
-              <Link href={`/projects/${item.slug}`} >
+              <Link href={`/projects/${item.slug}`}>
                 <Image
                   src={item.image[0].url}
                   width={item.image[0].width}
                   height={item.image[0].height}
                   alt={item.image[0].id}
                   priority
-                  layout="responsive"   
-                  className="cursor-pointer"             
+                  layout="responsive"
+                  className="cursor-pointer"
                 ></Image>
               </Link>
-              
+
               {/* <h1 className="text-2xl font-bold pt-5">{item.title}</h1>
               <div>
                 {item.tags.map((tag) => (
@@ -82,7 +88,7 @@ function Projects({ data }) {
                     {tag}
                   </span>
                 ))}
-              </div> */}              
+              </div> */}
             </div>
           </div>
         ))}
