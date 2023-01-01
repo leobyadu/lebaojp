@@ -8,7 +8,7 @@ export default function Menu() {
           <h1 className="text-xl static text-red-500">Bao</h1>
           <span className=" text-slate-200">Blog&Portfolio</span>
         </div>
-        <ul className="flex sm:mt-0 text-xl ss:text-center ss:pt-10 mx-auto">
+        <ul className="flex sm:mt-0 text-xl ss:text-center ss:pt-10">
           <li>
             <Link href="/">
               <a className="text-gray-500 hover:text-slate-100 active:text-slate-100">
@@ -31,6 +31,7 @@ export default function Menu() {
             </Link>
           </li>
         </ul>
+        <div className="text-base text-white">Today {new Date().toLocaleString("en-US", { day : '2-digit'})}-{new Date().toLocaleString("en-US", { month: "numeric" })}-{new Date().getFullYear()}</div>
       </div>
     </div>
   );

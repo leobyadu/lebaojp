@@ -34,7 +34,7 @@ export default function Home({ postItem, contents }) {
   // console.log(contents);
 
   return (
-    <div className="mx-auto max-w-full ss:px-3" key={postItem.id}>
+    <div className="mx-auto max-w-full ss:px-3 md:px-0" key={postItem.id}>
       <Head>
         <title>Bao Blog| {postItem.title}</title>
         <meta name="description" content="Bao Blog" />
@@ -44,7 +44,7 @@ export default function Home({ postItem, contents }) {
         <Menu />
       </div>
 
-      <div className="max-w-3xl mx-auto items-center justify-between pt-10">
+      <div className="max-w-4xl mx-auto items-center justify-between pt-10">
         <h1 className="text-3xl py-3 font-bold">{postItem.title}</h1>
         <div>
           {postItem.tags.map((tag) => (
