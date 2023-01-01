@@ -3,25 +3,27 @@ import Link from "next/link";
 import Image from "next/image";
 
 //import data from graphQL Api
-import { getAll } from "../lib/data";
+import { getAll, getTrending } from "../lib/data";
 import Trending from "../components/Trending";
 
 export const getStaticProps = async () => {
   const data = await getAll();
+  const trendings = await getTrending();
   return {
     props: {
       data,
+      trendings
     },
   };
 };
 
-export default function Home({ data }) {
+export default function Home({ data, trendings }) {
   // console.log(data);
   return (
     <Wrapper>
       {/* {Posts({ data })} */}
       <div>
-        <Trending></Trending>
+        <Trending data={trendings}></Trending>
       </div>
       {Projects({ data })}
     </Wrapper>
