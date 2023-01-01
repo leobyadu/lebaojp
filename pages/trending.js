@@ -9,6 +9,8 @@ export const getStaticProps = async () => {
   };
 };
 
+// getStaticProps chỉ sử dụng cho page
+
 export default function Trending({ data }) {
   return (
     <section className="max-w-5xl mx-auto text-center text-slate-800 my-10">

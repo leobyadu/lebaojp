@@ -1,6 +1,5 @@
 import { getProjTrendings } from "../lib/data";
-
-
+// 
 
 export default function Trending({ data }) {
   return (
