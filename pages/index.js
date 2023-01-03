@@ -22,9 +22,9 @@ export default function Home({ data, trendings }) {
   return (
     <Wrapper>
       {/* {Posts({ data })} */}
-      {/* <div>
+      <div>
         <Trending data={trendings}></Trending>
-      </div> */}
+      </div>
       {Projects({ data })}
     </Wrapper>
   );
@@ -60,7 +60,7 @@ function Posts({ data }) {
 function Projects({ data }) {
   return (
     <section className="lg:px-20 lg:pt-20 ss:px-3 ss:pt-5">
-      <h1 className="font-bold text-4xl pb-10 pt-5 text-white relative after:absolute after:w-9 after:h-1  after:bg-yellow-500 after:top-0 after:left-0">
+      <h1 className="home_tittle">
         Recent Projects
       </h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 ">
