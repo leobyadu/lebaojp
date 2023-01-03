@@ -66,7 +66,7 @@ export default function Home({ postItem, contents }) {
             layout="responsive"
           />
         </div>
-        <div className="prose prose-xl">
+        <div className="prose prose-xl max-w-4xl mx-auto">
           <MDXRemote {...contents} />
         </div>
         <div className="py-20 text-center">
