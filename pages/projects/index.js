@@ -34,23 +34,22 @@ export default function Projects({ items }) {
                       height={item.image[0].height}
                       objectFit="cover"
                       width={item.image[0].width}
+                      alt={item.image[0].id}
                     />
                   </div>
                   <div className="flex-auto">
-                  <h1 className="text-2xl font-semibold">
-                    {item.title}
-                  </h1>
-                  <div className="mt-2">
-                    {item.tags.map((tag) => (
-                      <span
-                        className="text-white uppercase tracking-wide text-xs mr-2 px-2 py-1 rounded-full bg-slate-800"
-                        key={tag}
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    <h1 className="text-2xl font-semibold">{item.title}</h1>
+                    <div className="mt-2">
+                      {item.tags.map((tag) => (
+                        <span
+                          className="text-white uppercase tracking-wide text-xs mr-2 px-2 py-1 rounded-full bg-slate-800"
+                          key={tag}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
                 </a>
               </Link>
             </div>

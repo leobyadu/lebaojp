@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       data,
-      trendings
+      trendings,
     },
   };
 };
@@ -45,6 +45,7 @@ function Posts({ data }) {
                   width={item.coverImage.width}
                   height={item.coverImage.height}
                   className="hover:scale-105 rounded shadow"
+                  alt={item.coverImage.id}
                 ></Image>
                 <h1 className="text-2xl font-bold pt-5">{item.title}</h1>
                 <p className="text-xl text-gray-500">{item.description}</p>
@@ -60,9 +61,7 @@ function Posts({ data }) {
 function Projects({ data }) {
   return (
     <section className="lg:px-20 lg:pt-20 ss:px-3 ss:pt-5">
-      <h1 className="home_tittle">
-        Recent Projects
-      </h1>
+      <h1 className="home_tittle">Recent Projects</h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 ">
         {/* -------- Single item -------- */}
         {data?.projects?.map((item) => (
