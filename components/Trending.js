@@ -1,3 +1,4 @@
+//Update Status 3/1/2022
 // import Swiper JS
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
