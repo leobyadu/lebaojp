@@ -36,7 +36,7 @@ function ListPosts({ data }) {
                   width={item.coverImage.width}
                   height={item.coverImage.height}
                   className="hover:scale-105 rounded shadow"
-                  alt={item.coverImage.id}
+                  alt="Image"
                 ></Image>
                 <h1 className="text-2xl font-bold pt-2 text-white">
                   {item.title}

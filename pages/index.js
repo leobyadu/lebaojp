@@ -21,7 +21,6 @@ export default function Home({ data, trendings }) {
   // console.log(data);
   return (
     <Wrapper>
-      {/* {Posts({ data })} */}
       <div>
         <Trending data={trendings}></Trending>
       </div>
@@ -45,7 +44,7 @@ function Posts({ data }) {
                   width={item.coverImage.width}
                   height={item.coverImage.height}
                   className="hover:scale-105 rounded shadow"
-                  alt={item.coverImage.id}
+                  alt="Image"
                 ></Image>
                 <h1 className="text-2xl font-bold pt-5">{item.title}</h1>
                 <p className="text-xl text-gray-500">{item.description}</p>

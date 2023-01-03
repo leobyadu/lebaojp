@@ -31,7 +31,7 @@ export default function Trending({ data }) {
                 src={item.image[0].url}
                 width={item.image[0].width}
                 height={item.image[0].height}
-                alt={item.image[0].id}
+                alt="Image"
                 priority
                 layout="responsive"
                 className="cursor-pointer"

@@ -34,7 +34,7 @@ export default function Projects({ items }) {
                       height={item.image[0].height}
                       objectFit="cover"
                       width={item.image[0].width}
-                      alt={item.image[0].id}
+                      alt="Image"
                     />
                   </div>
                   <div className="flex-auto">
