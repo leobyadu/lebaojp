@@ -24,8 +24,8 @@ export default function Trending({ data }) {
         pagination={{ clickable: true }}
         autoplay={{ delay: 2000 }}
       >
-        {data?.projects?.map((item) => (
-          <SwiperSlide>
+        <SwiperSlide>
+          {data?.projects?.map((item) => (
             <div key={item.slug}>
               <Image
                 src={item.image[0].url}
@@ -38,8 +38,8 @@ export default function Trending({ data }) {
               ></Image>
               <h2 className="text-2xl pt-5">{item.title}</h2>
             </div>
-          </SwiperSlide>
-        ))}
+          ))}
+        </SwiperSlide>
       </Swiper>
     </section>
   );
