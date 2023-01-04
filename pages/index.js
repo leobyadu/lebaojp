@@ -29,33 +29,33 @@ export default function Home({ data, trendings }) {
   );
 }
 
-function Posts({ data }) {
-  return (
-    <section className="px-20 pt-20">
-      <h1 className="font-bold text-4xl pb-10 pt-5">Recent Posts</h1>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 md:gap-20 sm:gap-10 ">
-        {/* -------- Single item -------- */}
-        {data?.posts?.map((item) => (
-          <div key={item.slug}>
-            <Link href={`/posts/${item.slug}`}>
-              <a>
-                <Image
-                  src={item.coverImage.url}
-                  width={item.coverImage.width}
-                  height={item.coverImage.height}
-                  className="hover:scale-105 rounded shadow"
-                  alt="Image"
-                ></Image>
-                <h1 className="text-2xl font-bold pt-5">{item.title}</h1>
-                <p className="text-xl text-gray-500">{item.description}</p>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+// function Posts({ data }) {
+//   return (
+//     <section className="px-20 pt-20">
+//       <h1 className="font-bold text-4xl pb-10 pt-5">Recent Posts</h1>
+//       <div className="grid md:grid-cols-3 sm:grid-cols-2 md:gap-20 sm:gap-10 ">
+//         {/* -------- Single item -------- */}
+//         {data?.posts?.map((item) => (
+//           <div key={item.slug}>
+//             <Link href={`/posts/${item.slug}`}>
+//               <a>
+//                 <Image
+//                   src={item.coverImage.url}
+//                   width={item.coverImage.width}
+//                   height={item.coverImage.height}
+//                   className="hover:scale-105 rounded shadow"
+//                   alt="Image"
+//                 ></Image>
+//                 <h1 className="text-2xl font-bold pt-5">{item.title}</h1>
+//                 <p className="text-xl text-gray-500">{item.description}</p>
+//               </a>
+//             </Link>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
 
 function Projects({ data }) {
   return (
@@ -74,7 +74,7 @@ function Projects({ data }) {
                   alt={item.image[0].id}
                   priority
                   layout="responsive"
-                  className="cursor-pointer"
+                  className="cursor-pointer grayscale hover:grayscale-0 hover:scale-110"
                 ></Image>
               </Link>
 
