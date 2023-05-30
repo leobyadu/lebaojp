@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 import Menu from "../../components/Menu";
 
@@ -24,7 +25,7 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       postItem: postItem.posts[0],
-      contents: await serialize(postItem.posts[0].content),
+      contents: postItem.posts[0].richcontent.raw.children,
     },
   };
 };
@@ -67,7 +68,8 @@ export default function Home({ postItem, contents }) {
           />
         </div>
         <div className="prose prose-xl max-w-4xl mx-auto">
-          <MDXRemote {...contents} />
+          <RichText content={contents} />
+          {/* <MDXRemote {...contents} /> */}
         </div>
         <div className="py-20 text-center">
           <span className="bg-transparent hover:bg-slate-800 text-black hover:text-white font-semibold py-2 px-4 border border-black hover:border-transparent rounded">

@@ -23,7 +23,7 @@ export default function Trending({ data }) {
         slidesPerView={2}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 3000 }}
       >
         {data?.projects?.map((item) => (
           <SwiperSlide key={item.slug}>

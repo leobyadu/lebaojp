@@ -1,8 +1,10 @@
 import Wrapper from "../layout/wrapper";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 //import data from graphQL Api
+import {graphCMS} from "../lib/data";
 import { getAll, getProjTrendings } from "../lib/data";
 import Trending from "../components/Trending";
 

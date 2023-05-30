@@ -25,7 +25,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       projectItem: projectItem.projects[0],
       contents: await serialize(projectItem.projects[0].content),
-    },
+      },
   };
 };
 
