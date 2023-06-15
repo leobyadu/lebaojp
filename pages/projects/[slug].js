@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 import Menu from "../../components/Menu";
 
@@ -15,7 +16,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug.slug } })),
-    fallback: false,
+    fallback: "blocking",
   };
 };
 
@@ -24,14 +25,14 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       projectItem: projectItem.projects[0],
-      contents: await serialize(projectItem.projects[0].content),
+      contents: projectItem.projects[0].richcontent.raw.children,
       },
   };
 };
 
 export default function Home({ projectItem, contents }) {
   // console.log(projectItem);
-  // console.log(contents);
+  console.log(contents);
 
   return (
     <div className="mx-auto max-w-full ss:px-3 md:px-0" key={projectItem.id}>
@@ -66,7 +67,8 @@ export default function Home({ projectItem, contents }) {
           />
         </div>
         <div className="my-3 prose prose-xl max-w-4xl mx-auto">
-          <MDXRemote {...contents} />
+          <RichText content={contents}/>
+          {/* <MDXRemote {...contents} /> */}
         </div>
         <div className="py-20 text-center">
           <span className="bg-transparent hover:bg-slate-800 text-black hover:text-white font-semibold py-2 px-4 border border-black hover:border-transparent rounded">

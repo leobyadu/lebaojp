@@ -30,6 +30,13 @@ export default function Menu() {
               </a>
             </Link>
           </li>
+          <li className="ml-7">
+            <Link href="/jlpt">
+              <a className="text-gray-500 hover:text-slate-100 active:text-slate-100">
+                JLPT 
+              </a>
+            </Link>
+          </li>
         </ul>
         <div className="text-base text-white">Today {new Date().toLocaleString("en-US", { day : '2-digit'})}-{new Date().toLocaleString("en-US", { month: "numeric" })}-{new Date().getFullYear()}</div>
       </div>
