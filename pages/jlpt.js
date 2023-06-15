@@ -28,8 +28,8 @@ export default function LearnJlpt({ data, contents }) {
             <div key={item.id} className="my-3 mx-3 px-2 py-2">
               <div>
                 <h1 className="text-3xl">{item.vocalbularyName}</h1>
-                <h2 className="text-xl">{item.furigana}</h2>
-                <h2 className="text-2xl font-bold">{item.hantuVietnam}</h2>
+                <h2 className="text-xl text-slate-500">{item.furigana}</h2>
+                <h2 className="text-2xl font-bold text-slate-800">{item.hantuVietnam}</h2>
               </div>
               <div className="text-xl text-slate-500">{item.volcabularyMeaning.raw.children[0].children[0].text}</div>
               
