@@ -2,7 +2,6 @@ import Wrapper from "../layout/wrapper";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
 import { getAllJlpt} from "../lib/jplpt-db";
-import Hero from "../components/Hero";
 
 export const getStaticProps = async () => {
   const data = await getAllJlpt();
