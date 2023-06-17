@@ -26,9 +26,9 @@ export default function LearnJlpt({ data, contents }) {
           {data?.vocalbularies?.map((item) => (            
             <div key={item.id} className="my-3 mx-3 px-2 py-2">
               <div>
-                <h1 className="text-3xl">{item.vocalbularyName}</h1>
+                <h1 className="text-4xl mb-2">{item.vocalbularyName}</h1>
                 <h2 className="text-xl text-slate-500">{item.furigana}</h2>
-                <h2 className="text-2xl font-bold text-slate-800 uppercase ">{item.hantuVietnam}</h2>
+                <h2 className="text-xl font-bold text-slate-800 uppercase ">{item.hantuVietnam}</h2>
               </div>              
               <div className="text-sm lowercase text-slate-500  ">
                 <RichText content={item.volcabularyMeaning.raw.children} />
