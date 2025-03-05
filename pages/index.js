@@ -1,7 +1,7 @@
 import Wrapper from "../layout/wrapper";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+
 
 //import data from graphQL Api
 import { getAll, getProjTrendings } from "../lib/data";

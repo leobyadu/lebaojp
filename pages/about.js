@@ -4,10 +4,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 
-
 import { getAuthors } from "../lib/data";
-
-
 
 export const getStaticProps = async () => {
   const data = await getAuthors();
