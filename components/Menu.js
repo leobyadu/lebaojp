@@ -24,9 +24,9 @@ export default function Menu() {
             </Link>
           </li>
           <li className="ml-7">
-            <Link href="#">
-              <a className="text-gray-500 hover:text-slate-100 active:text-slate-100">
-                Inspirations
+            <Link href="https://jlpt-docs.vercel.app/">
+              <a className="text-gray-500 hover:text-slate-100 active:text-slate-100" target="blank">
+                Learn JLPT
               </a>
             </Link>
           </li>
@@ -37,7 +37,6 @@ export default function Menu() {
     </div>
   );
 }
-
 /* <li className="ml-7">
     <Link href="/jlpt">
       <a className="text-gray-500 hover:text-slate-100 active:text-slate-100">
