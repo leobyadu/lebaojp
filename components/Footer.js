@@ -7,7 +7,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaGithub, FaGitlab } fro
     return (
       <div className="mx-auto pt-20 pb-10 px-4 sm:px-6 lg:px-0 flex flex-col justify-center">
         <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:gird-col-1 justify-center text-center max-w-5xl mx-auto">
-          <div>
+          {/* <div>
             <h1 className="footer_tittle">Illustrator</h1>
             <ul className="text-xl text-gray-300">
               <li className="py-2">Logo</li>
@@ -36,7 +36,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaGithub, FaGitlab } fro
               <li className="py-2">Rendering</li>
               <li className="py-2">Scupt for 3D Printing</li>
             </ul>
-          </div>
+          </div> */}
         </div>        
         <ul className="mt-8 flex justify-center space-x-6 text-white text-xl ">
           <li><Link href="#"><a className="cursor-pointer"><FaFacebook /></a></Link></li>
@@ -47,7 +47,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaGithub, FaGitlab } fro
           <li><Link href="#"><a className="cursor-pointer"><FaGitlab /></a></Link></li>                     
         </ul>        
         <div className="text-gray-500 text-center mt-4 mb-10">
-          &copy;{new Date().getFullYear()} Bao Blogs&Portfolio
+          &copy;{new Date().getFullYear()} Bao Blogs&Portfolio - NextJs + HygraphCMS
         </div>
       </div>
     );

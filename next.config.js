@@ -1,10 +1,13 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
-    domains: ["media.graphassets.com"],
+    domains: ['media.graphassets.com', 'ap-northeast-1.graphassets.com'], // Add your region domain here
   },
-}
+  env: {
+    HYGRAPH_API_URL: process.env.HYGRAPH_API_URL,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
